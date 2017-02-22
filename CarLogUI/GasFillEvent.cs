@@ -10,6 +10,6 @@ namespace CarLog
     {
         public int TotalPrice { get; private set; }
         public int TotalLiters { get; private set; }
-        public int PricePerLiters { get; private set; }
+        public DateTime Timestamp { get; private set; }
     }
 }

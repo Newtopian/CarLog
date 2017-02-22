@@ -1,19 +1,26 @@
-﻿<Window x:Class="WpfApplication1.MainWindow"
+﻿<Window x:Class="CarLog.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApplication1"
+        xmlns:carLog="clr-namespace:CarLog"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        <Label x:Name="totalPaidLabel" Content="Label" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="70"/>
-        <TextBox x:Name="totalPaidTextBox" HorizontalAlignment="Left" Height="23" Margin="85,10,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <Label x:Name="pricePerLitersLabel" Content="Label" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top" Width="70"/>
-        <TextBox x:Name="pricePerLitersTextBox" HorizontalAlignment="Left" Height="23" Margin="85,45,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <Label x:Name="totalLitersLabel" Content="Label" HorizontalAlignment="Left" Margin="10,72,0,0" VerticalAlignment="Top" Width="70"/>
-        <TextBox x:Name="totalLitersTextBox" HorizontalAlignment="Left" Height="23" Margin="85,76,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="addButton" Content="Button" HorizontalAlignment="Left" Margin="10,104,0,0" VerticalAlignment="Top" Width="75"/>
+    <DockPanel>
+        <Grid DockPanel.Dock="Left">
+            <Label x:Name="TotalPaidLabel" Content="Label" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="70"/>
+            <TextBox x:Name="TotalPaidTextBox" HorizontalAlignment="Left" Height="23" Margin="85,10,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+            <Label x:Name="PricePerLitersLabel" Content="Label" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top" Width="70"/>
+            <TextBox x:Name="PricePerLitersTextBox" HorizontalAlignment="Left" Height="23" Margin="85,45,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+            <Label x:Name="TotalLitersLabel" Content="Label" HorizontalAlignment="Left" Margin="10,72,0,0" VerticalAlignment="Top" Width="70"/>
+            <TextBox x:Name="TotalLitersTextBox" HorizontalAlignment="Left" Height="23" Margin="85,76,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+            <Button x:Name="AddButton" Content="Button" HorizontalAlignment="Left" Margin="10,104,0,0" VerticalAlignment="Top" Width="75"/>
+        </Grid>
+        <carLog:GasEventListControl VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+            
+            
+        </carLog:GasEventListControl>
+    </DockPanel>
 
-    </Grid>
 </Window>
